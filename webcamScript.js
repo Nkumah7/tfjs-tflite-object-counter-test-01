@@ -10,7 +10,7 @@ async function setupWebcam() {
         const webcamStream = await navigator.mediaDevices.getUserMedia({
             audio: false,
             video: { 
-                facingMode: "user",
+                facingMode: "environment",
          }
         });
 
@@ -52,9 +52,9 @@ const loadedModel = loadModel();
 let predsCount = {};
 video.addEventListener('play', async () => {    
     const canvas = document.querySelector("canvas");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-    console.log(video.videoHeight, video.videoWidth)
+    canvas.width = 640;
+    canvas.height = 640;
+    // console.log(video.videoHeight, video.videoWidth)
     const ctx = canvas.getContext("2d");
     interval = setInterval(() => {
         ctx.drawImage(video, 0, 0);
