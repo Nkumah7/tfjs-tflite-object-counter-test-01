@@ -1,0 +1,18 @@
+img {
+    height: 250px;
+  }
+  
+  .btn {
+    border: 1px solid #888;
+    cursor: pointer;
+    width: 100px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .btn:hover {
+    background-color: #eee;
+  }
